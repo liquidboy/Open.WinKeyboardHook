@@ -7,7 +7,8 @@ namespace Open.WinKeyboardHook
     {
         void StartCapturing();
         void StopCapturing();
-        event EventHandler<OpenKeyEventArgs> KeyDown;
-        event EventHandler<OpenKeyEventArgs> KeyUp;
+        //event EventHandler<OpenKeyEventArgs> KeyDown;
+        //event EventHandler<OpenKeyEventArgs> KeyUp;
+        event EventHandler<OpenKeyEventArgs> KeyPress;
     }
 }

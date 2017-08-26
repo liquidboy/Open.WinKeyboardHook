@@ -33,8 +33,9 @@ namespace Open.WinKeyboardHook
 {
     public sealed class KeyboardInterceptor : IKeyboardInterceptor
     {
-        public event EventHandler<OpenKeyEventArgs> KeyDown;
-        public event EventHandler<OpenKeyEventArgs> KeyUp;
+        //public event EventHandler<OpenKeyEventArgs> KeyDown;
+        public event EventHandler<OpenKeyEventArgs> KeyPress;
+        //public event EventHandler<OpenKeyEventArgs> KeyUp;
 
         private bool _isInitialized = false;
 
@@ -70,12 +71,15 @@ namespace Open.WinKeyboardHook
         private void CoreWindow_KeyUp(CoreWindow sender, KeyEventArgs args)
         {
             var keys = BuildKeyData(args.VirtualKey, false);
-            KeyUp?.Invoke(null, new OpenKeyEventArgs(keys));
+            //KeyUp?.Invoke(null, new OpenKeyEventArgs(keys));
+            KeyPress?.Invoke(null, new OpenKeyEventArgs(keys));
         }
 
         private void CoreWindow_KeyDown(CoreWindow sender, KeyEventArgs args)
         {
             var keys = BuildKeyData(args.VirtualKey, true);
+            //KeyDown?.Invoke(null, new OpenKeyEventArgs(keys));
+            KeyPress?.Invoke(null, new OpenKeyEventArgs(keys));
         }
 
         private VirtualKey BuildKeyData(VirtualKey virtualKeyCode, bool isDown = true)
