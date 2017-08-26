@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Open.WinKeyboardHook.UWP</id>
-    <version>$version$</version>
+    <version>1.0.0</version>
     <authors>
       liquidboy
     </authors>
@@ -15,4 +15,8 @@
     <copyright></copyright>
     <tags>Keyboard hook intercept global event keyup keydown </tags>
   </metadata>
+  <files>
+    <file src="bin\Debug\Open.WinKeyboardHook.UWP.dll" target="lib\uap10.0"/>
+    <file src="bin\Debug\Open.WinKeyboardHook.UWP.pri" target="lib\uap10.0"/>
+  </files>
 </package>
