@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Open.WinKeyboardHook.UWP</id>
+    <version>$version$</version>
+    <authors>
+      liquidboy
+    </authors>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/lontivero/Open.WinKeyboardHook</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      A simple and easy-to-use .UWP wrapper for Keyboard hooking.
+    </description>
+    <copyright></copyright>
+    <tags>Keyboard hook intercept global event keyup keydown </tags>
+  </metadata>
+</package>
